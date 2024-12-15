@@ -35,6 +35,16 @@
     display: none;
   }
 }
+/* Close Button for Sidebar */
+.close-sidebar-btn {
+  background: none;
+  border: none;
+  color: black;
+  font-size: 18px;
+  cursor: pointer;
+  margin-bottom: 10px;
+  display: none;
+}
 @media (max-width: 968px) {
   .sidebar {
     position: fixed;
@@ -50,18 +60,13 @@
   .sidebar.show {
     transform: translateX(0); /* Show Sidebar when toggled */
   }
+  .close-sidebar-btn {
+    display: block;
+    color: black;
+  }
 }
 
-/* Close Button for Sidebar */
-.close-sidebar-btn {
-  background: none;
-  border: none;
-  color: black;
-  font-size: 18px;
-  cursor: pointer;
-  margin-bottom: 10px;
-  display: none;
-}
+
 
 /* Toggle Sidebar Button - Small Screens Only */
 .toggle-sidebar-btn {
@@ -81,6 +86,7 @@
   }
   .close-sidebar-btn {
     display: block;
+    color: black;
   }
 }
 
