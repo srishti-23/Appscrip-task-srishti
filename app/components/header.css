@@ -1,0 +1,162 @@
+/* Base Header Styles */
+.header {
+  width: 100%;
+  height: 220px;
+  border-bottom: 1px solid rgb(212, 205, 205);
+}
+
+.nav {
+  background-color: black;
+  color: maroon;
+  font-size: smaller;
+}
+
+/* .nav-text {
+ 
+  padding: 10px;
+  margin-left: 20px;
+  gap:20px
+} */
+.nav-text {
+  display: flex; /* Makes the container flexbox */
+  justify-content: space-between; /* Adds equal space between items */
+  align-items: center; /* Vertically centers items */
+  gap: 60px; /* Adds space between text items */
+  width: 100%; /* Ensures full width of the parent container */
+  font-family: Arial, sans-serif; /* Optional: Specify font */
+  font-size: 16px; /* Adjust the text size */
+  padding: 10px;
+}
+
+.logo {
+  display: flex;
+  justify-content: center; /* Centers content horizontally */
+  align-items: center; /* Centers content vertically */
+  padding: 20px;
+  position: relative; /* Allow positioning of other elements */
+}
+
+.logo-text {
+  font-weight: 800;
+  font-size: 36px;
+  text-align: center; /* Ensure text is centered */
+  flex-grow: 1; /* Ensure it takes up available space */
+}
+
+.logo-img {
+  margin-left: 20px;
+  position: absolute; /* Position logo image without affecting centering */
+  left: 20px; /* Keep the image to the left */
+}
+
+.logo-icons {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  position: absolute; /* Position icons without affecting centering */
+  right: 20px; /* Keep the icons to the right */
+}
+.user-icon,
+.dropdown {
+  display: block; /* Default: Show on larger screens */
+}
+
+@media (max-width: 768px) {
+  .user-icon {
+    display: none; /* Hide user icon */
+  }
+
+  .dropdown {
+    display: none !important; /* Hide dropdown on smaller screens */
+  }
+}
+
+
+@media (max-width: 768px) {
+  .logo-text {
+    font-size: 28px; /* Adjust text size for medium screens */
+  }
+
+  .logo-img {
+    left: 40px; /* Adjust position for smaller screens */
+  }
+
+  .logo-icons {
+    right: 10px; /* Adjust position for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .logo-text {
+    font-size: 24px; /* Adjust text size for small screens */
+  }
+
+  .logo-img {
+    left: 5px; /* Further adjust position for very small screens */
+  }
+
+  .logo-icons {
+    right: 5px; /* Further adjust position for very small screens */
+  }
+}
+
+.dropdown {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+/* Hamburger Menu */
+.hamburger {
+  display: none; /* Hidden on larger screens */
+  cursor: pointer;
+}
+
+/* Navigation List */
+.list {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  margin-top: 20px;
+  font-size: larger;
+  font-weight: 600;
+  color: rgb(56, 56, 56);
+  cursor: pointer;
+}
+
+.list-text:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block; /* Show hamburger icon */
+  }
+
+  .list {
+    display: none; /* Hide list initially */
+    flex-direction: column;
+    background-color: white;
+    position: absolute;
+    top: 100px;
+    right: 0;
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+    gap: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  .list-open {
+    display: flex; /* Show list when menu is open */
+  }
+}
+
+@media (max-width: 480px) {
+  .list {
+    font-size: medium;
+  }
+}

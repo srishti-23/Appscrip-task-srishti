@@ -1,0 +1,153 @@
+/* Products Container */
+.products-container {
+  display: flex;
+  position: relative;
+}
+
+/* Sidebar Styles */
+.sidebar {
+  width: 400px;
+  padding: 20px;
+  transition: transform 0.3s ease-in-out;
+}
+.section .hide {
+  color: gray;
+  font-size: large;
+  font-weight: 200;
+}
+/* Sidebar Hidden on Small Screens */
+@media (max-width: 768px) {
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    transform: translateX(-100%); /* Hide Sidebar */
+    z-index: 1000;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+    background-color: lightgray;
+  }
+
+  .sidebar.show {
+    transform: translateX(0); /* Show Sidebar when toggled */
+  }
+  .section .items {
+    display: none;
+  }
+}
+@media (max-width: 968px) {
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    transform: translateX(-100%); /* Hide Sidebar */
+    z-index: 1000;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+    background-color: lightgray;
+  }
+
+  .sidebar.show {
+    transform: translateX(0); /* Show Sidebar when toggled */
+  }
+}
+
+/* Close Button for Sidebar */
+.close-sidebar-btn {
+  background: none;
+  border: none;
+  color: black;
+  font-size: 18px;
+  cursor: pointer;
+  margin-bottom: 10px;
+  display: none;
+}
+
+/* Toggle Sidebar Button - Small Screens Only */
+.toggle-sidebar-btn {
+  display: none;
+  /* background-color: #007bff; */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .toggle-sidebar-btn {
+    display: block;
+  }
+  .close-sidebar-btn {
+    display: block;
+  }
+}
+
+/* Product Grid */
+.products-grid {
+  flex-grow: 1;
+  padding: 20px;
+}
+
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.product-card {
+  width: calc(33.333% - 20px);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  text-align: center;
+}
+
+.product-image {
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+}
+
+.product-title {
+  font-size: 16px;
+  margin-top: 10px;
+  color: #555;
+}
+
+.product-description {
+  font-size: 14px;
+  color: #555;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+/* Responsive Product Grid */
+@media (max-width: 968px) {
+  .product-card {
+    width: calc(50% - 20px);
+  }
+}
+@media (max-width: 770px) {
+  .product-card {
+    width: calc(50% - 20px); /* Two columns */
+    margin: 10px auto; /* Proper padding and margin */
+  }
+}
+@media (max-width: 480px) {
+  .product-card {
+    width: calc(100% - 20px);
+  }
+}
+/* Specific Styling for Samsung Galaxy S8 */
+@media (max-width: 360px) {
+  .product-card {
+    width: calc(50% - 20px); /* Two columns */
+  }
+
+  .product-list {
+    gap: 10px; /* Adjust spacing */
+  }
+}

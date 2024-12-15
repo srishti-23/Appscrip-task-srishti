@@ -1,0 +1,139 @@
+/* General Footer Styling */
+.footer {
+  background-color: #000;
+  color: #fff;
+  padding: 40px 20px;
+  font-family: Arial, sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+/* Sections Styling */
+.footer-section {
+  flex: 1 1 1; /* Flexible layout with min width */
+  margin-bottom: 20px;
+}
+
+.footer-section h2,
+.footer-section h3 {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.footer-section p,
+.footer-section ul {
+  font-size: 12px;
+
+  margin: 4px 0;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+
+.footer-section ul li:hover {
+  text-decoration: underline;
+}
+
+/* Subscribe Section */
+.subscribe-input {
+  display: flex;
+  margin-top: 10px;
+}
+
+.subscribe-input input {
+  flex: 1;
+  padding: 8px;
+  border: none;
+  border-radius: 4px 0 0 4px;
+}
+
+.subscribe-input button {
+  background-color: #555;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 0 4px 4px 0;
+}
+
+.subscribe-input button:hover {
+  background-color: #777;
+}
+
+/* Bottom Section */
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  border-top: 1px solid #333;
+  padding-top: 20px;
+  margin-top: 20px;
+}
+
+.social-icons,
+.payment-icons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.payment-icons span{
+  display: block;
+  margin: auto;
+}
+
+.payment-icons img {
+  height: 20px;
+  width: auto;
+}
+.footer-columns {
+  display: flex;
+  justify-content: space-between; /* Space between columns */
+  flex-wrap: wrap; /* Ensures responsiveness */
+  gap: 20px; /* Optional: adds space between columns */
+}
+
+.footer-columns .links-column,
+.footer-columns .social-icons {
+  flex: 1 1 30%; /* Adjust width: each takes roughly 30% of the row */
+  min-width: 200px; /* Prevents columns from becoming too narrow */
+
+}
+
+.links-column h3,
+.social-icons span {
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.links-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.links-column ul li {
+  margin-bottom: 5px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.social-icons {
+  display: flex;
+  flex-direction: column;
+}
+
+.social-icons span {
+  font-size: 12px;
+  cursor: pointer;
+}

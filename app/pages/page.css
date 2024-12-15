@@ -1,0 +1,141 @@
+/* Base Styles */
+.main {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.main h1 {
+  font-weight: 400;
+  font-size: 56px;
+  margin-top: 72px;
+  margin-left: auto;
+  margin-right: auto;
+  color: #252020;
+  text-align: center;
+}
+
+.main p {
+  max-width: 721px;
+  color: #252020;
+  margin: 10px auto;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  height: 88px;
+  gap: 10px;
+  border-top: 1px solid grey;
+  border-bottom: 1px solid grey;
+  flex-wrap: wrap; /* Allows wrapping for smaller screens */
+}
+
+.section h4 {
+  font-size: 18px;
+}
+
+.section p {
+  color: grey;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.random {
+  font-weight: 500;
+  font-size: large;
+  padding: 6px;
+  border: none;
+  text-transform: uppercase;
+}
+
+/* Responsive Styles */
+
+/* Small Screens: Tablets */
+@media (max-width: 768px) {
+  .main h3 {
+    font-size: 36px;
+    margin-top: 50px;
+  }
+
+  .main p {
+    width: 90%;
+    font-size: 14px;
+  }
+
+  .section {
+    flex-direction: row; /* Align items in a row */
+    justify-content: space-between;
+    height: auto; /* Adjust height dynamically */
+    gap: 15px; /* Increase spacing */
+    text-align: center; /* Center-align content */
+  }
+
+  .filter-button {
+    flex: 1;
+    padding: 10px;
+    text-align: center;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    
+  }
+
+  .random {
+    flex: 1;
+    padding: 10px;
+    font-size: medium;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+   
+  }
+
+  .items {
+    font-size: 16px;
+  }
+}
+
+/* Very Small Screens: Mobile Phones */
+@media (max-width: 480px) {
+  .main h3 {
+    font-size: 28px;
+    margin-top: 30px;
+  }
+
+  .main p {
+    width: 100%;
+    font-size: 12px;
+  }
+
+  .section {
+    flex-direction: row; /* Align items in a row */
+    justify-content: space-between;
+    gap: 10px; /* Adjust spacing */
+  }
+
+  .filter-button {
+    flex: 1;
+    padding: 8px;
+    font-size: small;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+
+  .random {
+    flex: 1;
+    padding: 8px;
+    font-size: small;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+
+  .hide {
+    display: none; /* Hide 'Hide Filter' on very small screens */
+  }
+}
